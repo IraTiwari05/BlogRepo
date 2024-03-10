@@ -26,19 +26,30 @@ const Wrapper = styled(Box)`
 `;
 const LoginButton = styled(Button)`
   text-transform: none;
-  background-color:blue;
+  background-color: blue;
   color: white;
   height: 45px;
   text-align: center;
   border-radius: 2px;
 `;
 
+const signupInitialValues = {
+  name: "",
+  username: "",
+  password: "",
+};
+
 const Login = () => {
   const imageURL =
     "https://www.sesta.it/wp-content/uploads/2021/03/logo-blog-sesta-trasparente.png";
   const [account, toggleAccount] = useState("Login");
+  const [signup, setSignup] = useState(signupInitialValues);
   const toggleSignup = () => {
     account === "signup" ? toggleAccount("Login") : toggleAccount("signup");
+  };
+
+  const onInputChange = (e) => {
+    setSignup({ ...signup, [e.target.name]: e.target.value });
   };
   return (
     <Component>
@@ -54,10 +65,25 @@ const Login = () => {
           </Wrapper>
         ) : (
           <Wrapper>
-            <TextField variant="standard" label="Enter Name" />{" "}
+            <TextField
+              variant="standard"
+              onChange={(e) => onInputChange(e)}
+              name="name"
+              label="Enter Name"
+            />{" "}
             {/*label work as place holder*/}
-            <TextField variant="standard" label="Enter Username" />
-            <TextField variant="standard" label="Enter Password" />
+            <TextField
+              variant="standard"
+              onChange={(e) => onInputChange(e)}
+              name="username"
+              label="Enter Username"
+            />
+            <TextField
+              variant="standard"
+              onChange={(e) => onInputChange(e)}
+              name="password"
+              label="Enter Password"
+            />
             <LoginButton variant="contained">Signup</LoginButton>
             <Typography>Or</Typography>
             <Button onClick={() => toggleSignup()}>
