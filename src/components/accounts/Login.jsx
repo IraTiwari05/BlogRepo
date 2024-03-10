@@ -26,8 +26,8 @@ const Wrapper = styled(Box)`
 `;
 const LoginButton = styled(Button)`
   text-transform: none;
-  background-color: orange;
-  color: black;
+  background-color:blue;
+  color: white;
   height: 45px;
   text-align: center;
   border-radius: 2px;
