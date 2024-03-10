@@ -34,8 +34,13 @@ const LoginButton = styled(Button)`
 `;
 
 const Login = () => {
+  {/*const imageURL =
+"https://www.sesta.it/wp-content/uploads/2021/03/logo-blog-sesta-trasparente.png";*/}
+  
   const imageURL =
-    "https://www.sesta.it/wp-content/uploads/2021/03/logo-blog-sesta-trasparente.png";
+"https://i.ibb.co/PzD1pmK/176072265-padded-logo.png";
+  
+    
   const [account, toggleAccount] = useState("Login");
   const toggleSignup = () => {
     account === "signup" ? toggleAccount("Login") : toggleAccount("signup");
