@@ -26,7 +26,7 @@ const Wrapper = styled(Box)`
 `;
 const LoginButton = styled(Button)`
   text-transform: none;
-  background-color:pink;
+  background-color:blue;
   color: white;
   height: 45px;
   text-align: center;
@@ -40,8 +40,13 @@ const signupInitialValues = {
 };
 
 const Login = () => {
+  {/*const imageURL =
+"https://www.sesta.it/wp-content/uploads/2021/03/logo-blog-sesta-trasparente.png";*/}
+  
   const imageURL =
-    "https://www.sesta.it/wp-content/uploads/2021/03/logo-blog-sesta-trasparente.png";
+"https://i.ibb.co/PzD1pmK/176072265-padded-logo.png";
+  
+    
   const [account, toggleAccount] = useState("Login");
   const [signup, setSignup] = useState(signupInitialValues);
   const toggleSignup = () => {
